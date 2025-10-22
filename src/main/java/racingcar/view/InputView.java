@@ -1,7 +1,11 @@
 package racingcar.view;
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.validate.InputValidate;
 
 public class InputView {
+
+    InputValidate inputValidate = new InputValidate();
+
     // 자동차 이름이 5글자 이하인지 판단하는 메서드
     // TODO : Validate 클래스 정의를 고려하기
     public void validateCarName(String carName) {
@@ -21,9 +25,8 @@ public class InputView {
     public int inputTimes() {
         String input = Console.readLine(); // 사용자에게 횟수를 입력받음
         // 1. 입력값이 비어있는지 유효성 검증
-        if (input.isEmpty()) {
-            throw new  IllegalArgumentException("입력값이 존재해야 합니다.");
-        }
+        inputValidate.validateLength(input);
+
         // 2. 입력값이 int 타입이 아닐때
         try {
             return Integer.parseInt(input); }
