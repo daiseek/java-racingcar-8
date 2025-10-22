@@ -9,4 +9,10 @@ public class InputValidate {
         }
     }
 
+    // 입력값이 int 타입이 아닌지 판단하는 메서드
+    public int validatePositiveNumber(String input) {
+        try {return Integer.parseInt(input); }
+        catch (NumberFormatException e) {throw new IllegalArgumentException("양의 정수를 입력해주세요.");}
+    }
+
 }
