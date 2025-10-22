@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Console;
 public class InputView {
     // 자동차 이름이 5글자 이하인지 판단하는 메서드
     // TODO : Validate 클래스 정의를 고려하기
-    public void validateCarNames(String carName) {
+    public void validateCarName(String carName) {
         if (carName.length() >5 ) {
             throw new IllegalArgumentException("자동차 이름은 5글자 이내여야 합니다.");
         }
