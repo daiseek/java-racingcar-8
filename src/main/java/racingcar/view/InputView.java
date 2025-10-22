@@ -27,13 +27,7 @@ public class InputView {
         // 1. 입력값이 비어있는지 유효성 검증
         inputValidate.validateLength(input);
 
-        // 2. 입력값이 int 타입이 아닐때
-        try {
-            return Integer.parseInt(input); }
-            catch (NumberFormatException e) {
-                throw new IllegalArgumentException("숫자만 입력해주세요.");
-            }
-        
-
+        // 2. 입력값이 int 타입이 맞는지 확인후 반복값 할당
+        return inputValidate.validatePositiveNumber(input);
     }
 }
