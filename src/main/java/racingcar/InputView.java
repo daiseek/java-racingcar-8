@@ -17,6 +17,7 @@ public class InputView {
     }
     
     // TODO : 시도 횟수를 양의 정수로 받아내는 메서드
+    // TODO : 유효성 검증 로직은 InputValidate 클래스로 분리
     public int inputTimes() {
         String input = Console.readLine(); // 사용자에게 횟수를 입력받음
         // 1. 입력값이 비어있는지 유효성 검증
