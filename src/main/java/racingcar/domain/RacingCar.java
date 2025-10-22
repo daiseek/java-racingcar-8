@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.domain;
 
 public class RacingCar {
     // TODO: 객체마다 0과 9 사이 랜덤한 값을 메서드 내 지역 변수로 가짐
