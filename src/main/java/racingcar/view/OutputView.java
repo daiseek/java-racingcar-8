@@ -8,5 +8,8 @@ public class OutputView {
     }
     
     // TODO : 전진 횟수가 제일 많은 레이싱카를 최종 우승자로 출력하는 메서드 정의
+    public void printWinnerCarName(RacingCar racingCar) {
+
+    }
 
 }
