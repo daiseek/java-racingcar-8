@@ -3,6 +3,10 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 public class RacingCar {
 
+    // RacingCar 속성 정의
+    private String name; // 자동차 이름
+    private int position = 0; // 초기 위치
+
     // 기본 생성자는 사용하지 못하게 private 접근자 선언
     private RacingCar(String name) { }
     
