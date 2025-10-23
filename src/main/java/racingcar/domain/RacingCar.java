@@ -32,7 +32,7 @@ public class RacingCar {
         if (randomNumber >= FORWARD_THRESHOLD) {
             return position++;
         }
-        return randomNumber;
+        return position;
     }
 
     // TODO: 명확한 객체 생성자 사용하기
