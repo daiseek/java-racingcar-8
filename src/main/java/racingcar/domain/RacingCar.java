@@ -7,6 +7,14 @@ public class RacingCar {
     private String name; // 자동차 이름
     private int position = 0; // 초기 위치
 
+    public String getName() {
+        return name;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
     private static final int FORWARD_THRESHOLD = 4;
     private static final int RANDOM_MIN_NUMBER = 0;
     private static final int RANDOM_MAX_NUMBER = 9;
