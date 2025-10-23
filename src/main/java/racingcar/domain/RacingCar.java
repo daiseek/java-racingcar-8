@@ -20,7 +20,9 @@ public class RacingCar {
     private static final int RANDOM_MAX_NUMBER = 9;
 
     // 기본 생성자는 사용하지 못하게 private 접근자 선언
-    private RacingCar(String name) { }
+    private RacingCar(String name) {
+        this.name = name;
+    }
     
     // TODO: 객체마다 0과 9 사이 랜덤한 값을 메서드 내 지역 변수로 가짐
 
