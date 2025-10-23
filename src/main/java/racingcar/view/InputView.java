@@ -15,9 +15,6 @@ public class InputView {
         inputValidate.validateLength(carName);
         // 2. 입력값이 5글자 이하인지 판단
         inputValidate.validateUnderFive(carName);
-        // 3. 입력값이 5글자 이하인지 판단
-        inputValidate.validateLength(carName);
-        
         // 모든 유효성 통과시 자동차 이름 반환
         return carName;
     }
