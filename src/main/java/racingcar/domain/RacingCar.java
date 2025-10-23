@@ -30,9 +30,10 @@ public class RacingCar {
     public int moveForward() {
         int randomNumber = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
         if (randomNumber >= FORWARD_THRESHOLD) {
-            return 1;
+            return position++;
         }
-    return 0;}
+        return randomNumber;
+    }
 
     // TODO: 명확한 객체 생성자 사용하기
     public static RacingCar of(String carName) {
