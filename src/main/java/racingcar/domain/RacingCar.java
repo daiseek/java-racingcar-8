@@ -33,7 +33,7 @@ public class RacingCar {
     return 0;}
 
     // TODO: 명확한 객체 생성자 사용하기
-    public static RacingCar from(String carName) {
+    public static RacingCar of(String carName) {
         return new RacingCar(carName);
     }
 
