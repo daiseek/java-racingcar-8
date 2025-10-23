@@ -7,6 +7,10 @@ public class RacingCar {
     private String name; // 자동차 이름
     private int position = 0; // 초기 위치
 
+    private static final int FORWARD_THRESHOLD = 4;
+    private static final int RANDOM_MIN_NUMBER = 0;
+    private static final int RANDOM_MAX_NUMBER = 9;
+
     // 기본 생성자는 사용하지 못하게 private 접근자 선언
     private RacingCar(String name) { }
     
@@ -14,8 +18,8 @@ public class RacingCar {
 
     // TODO: 랜덤값이 4 이상일 때 전진하는 메서드 필요? - 전진 횟수를 정수, 하이픈을 상수로 관리하기, 해당 메서드를 RacingCar가 정의해야 할까?
     public int moveForward() {
-        int randomNumber = Randoms.pickNumberInRange(0, 9);
-        if (randomNumber >= 4) {
+        int randomNumber = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
+        if (randomNumber >= FORWARD_THRESHOLD) {
             return 1;
         }
     return 0;}
