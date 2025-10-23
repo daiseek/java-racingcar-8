@@ -10,10 +10,16 @@ public class InputView {
 
     // 자동차 이름이 5글자 이하인지 판단하는 메서드
     // TODO : Validate 클래스 정의를 고려하기
-    public void validateCarName(String carName) {
-        if (carName.length() >5 ) {
-            throw new IllegalArgumentException("자동차 이름은 5글자 이내여야 합니다.");
-        }
+    public String validateCarName(String carName) {
+        // 1. 입력값이 비어있는지 유효성 검증
+        inputValidate.validateLength(carName);
+        // 2. 입력값이 5글자 이하인지 판단
+        inputValidate.validateUnderFive(carName);
+        // 3. 입력값이 5글자 이하인지 판단
+        inputValidate.validateLength(carName);
+        
+        // 모든 유효성 통과시 자동차 이름 반환
+        return carName;
     }
     
     // TODO : 한 줄로 입력받은 자동차 이름 목록들을 쉼표를 기준으로 구분하는 메서드 정의
