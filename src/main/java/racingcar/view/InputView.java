@@ -22,14 +22,13 @@ public class InputView {
         return carNames.split(",");
     }
 
-    public void inputCarNames() {
+    public String inputCarNames() {
         String carNames = Console.readLine();
         carNames = carNames.trim();
         // 입력값을 쉼표 기준으로 구분한 뒤 배열을 스트림 형태로 바꾸어 반환
         // 스트림? 데이터 -> 변환 -> 필터링 -> 결과를 하나의 흐름으로 붙일 수 있다. 
         // 또한, map, filter, reduce 등의 메서드를 사용하여 데이터를 처리할 수 있다.
-        Arrays.stream(carNames.split(",")); 
-
+        return carNames;
     }
     
     public int inputTimes() {
