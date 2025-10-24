@@ -17,9 +17,7 @@ public class OutputView {
     public void printWinnerCarName(List<RacingCar> racingCar) {
         List<RacingCar> winners = OutputUtil.findWinnerRacingCars(racingCar);
 
-        String winnerNames = winners.stream()
-                .map(RacingCar::getName)
-                .collect(Collectors.joining(", "));
+        String winnerNames = OutputUtil.joinWinnerNames(winners);
         System.out.println("최종 우승자: " + winnerNames);
 
 
