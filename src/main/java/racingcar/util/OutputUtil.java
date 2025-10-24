@@ -1,6 +1,7 @@
 package racingcar.util;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import racingcar.domain.RacingCar;
 
 public class OutputUtil {
@@ -21,5 +22,10 @@ public class OutputUtil {
 
 
     // TODO : 우승자 이름을 쉼표와 함께 연결하는 메서드 정의
+    public static String joinWinnerNames(List<RacingCar> winnerRacingCars) {
+        return winnerRacingCars.stream()
+                .map(RacingCar::getName)
+                .collect(Collectors.joining(", "));
+    }
     
 }
