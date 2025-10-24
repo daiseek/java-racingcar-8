@@ -16,13 +16,8 @@ public class OutputView {
     // TODO : car들을 여러개 받아서 어떻게 최다 position을 가진 car 객체를 찾을 수 있는지 고민
     public void printWinnerCarName(List<RacingCar> racingCar) {
         List<RacingCar> winners = OutputUtil.findWinnerRacingCars(racingCar);
-
         String winnerNames = OutputUtil.joinWinnerNames(winners);
         System.out.println("최종 우승자: " + winnerNames);
-
-
-        
-
     }
 
 }
