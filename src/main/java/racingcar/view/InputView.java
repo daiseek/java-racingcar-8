@@ -7,16 +7,6 @@ import racingcar.validate.InputValidate;
 public class InputView {
 
     InputValidate inputValidate = new InputValidate();
-
-    // 자동차 이름이 5글자 이하인지 판단하는 메서드
-    public String validateCarName(String carName) {
-        // 1. 입력값이 비어있는지 유효성 검증
-        inputValidate.validateLength(carName);
-        // 2. 입력값이 5글자 이하인지 판단
-        inputValidate.validateUnderFive(carName);
-        // 모든 유효성 통과시 자동차 이름 반환
-        return carName;
-    }
     
     public String[] separateCarNames(String carNames) {
         return carNames.split(",");

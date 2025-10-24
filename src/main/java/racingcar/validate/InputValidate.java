@@ -22,4 +22,19 @@ public class InputValidate {
         }
     }
 
+    // 각 이름별로 trim() 메서드 호출 후 5글자 이하인지 판단하는 메서드
+    public void validateTrimNames(String[] racingNames) {
+        for (String name : racingNames) {
+            validateUnderFive(name.trim());
+        }
+    }
+
+    // 자동차 이름이 5글자 이하인지 판단하는 메서드
+    public void validateCarName(String carName) {
+        // 1. 입력값이 비어있는지 유효성 검증
+        validateLength(carName);
+        // 2. 입력값이 5글자 이하인지 판단
+        validateUnderFive(carName);
+    }
+
 }
