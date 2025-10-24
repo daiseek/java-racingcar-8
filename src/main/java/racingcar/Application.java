@@ -1,5 +1,10 @@
 package racingcar;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import racingcar.domain.RacingCar;
+import racingcar.util.InputUtil;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -15,7 +20,10 @@ public class Application {
 
         String input = inputView.inputCarNames();
         String validatedInput = inputView.validateCarName(input);
-        String[] names = inputView.separateCarNames(validatedInput);
+        String[] racingCarNames = inputView.separateCarNames(validatedInput);
+
+        // 이름으로 RacingCar 객체 생성
+        List<RacingCar> racingCars = InputUtil.makeRacingCars(racingCarNames);
 
 
         // TODO: 사용자 반복할 횟수 입력값 받아내기
