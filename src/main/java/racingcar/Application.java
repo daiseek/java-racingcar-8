@@ -4,12 +4,14 @@ import java.util.List;
 import racingcar.domain.RacingCar;
 import racingcar.util.InputUtil;
 import racingcar.view.InputView;
+import racingcar.view.OutputView;
 
 public class Application {
     public static void main(String[] args) {
         // TODO: 프로그램 구현
 
         InputView inputView = new InputView();
+        OutputView outputView = new OutputView();
 
         // TODO: 여러 입력값을 넣어보며 유효성 검증해보기
         // TODO: 경주할 자동차를 입력 받기
@@ -31,9 +33,18 @@ public class Application {
         int racingTimes = inputView.inputTimes();
 
         // TODO : 게임 진행하기
+        for (int round = 0 ; round < racingTimes; round++) {
 
+            for (RacingCar racingCar : racingCars) {
+                racingCar.moveForward();
+            }
 
+            for (RacingCar racingCar : racingCars) {
+                outputView.printCarPositionPerRound(racingCar);
+            }
+            System.out.println(); // 라운드 구분
+        }
 
-        //
+        outputView.printWinnerCarName(racingCars);
     }
 }
