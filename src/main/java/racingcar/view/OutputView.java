@@ -13,7 +13,7 @@ public class OutputView {
     public void printWinnerCarName(List<RacingCar> racingCar) {
         List<RacingCar> winners = OutputUtil.findWinnerRacingCars(racingCar);
         String winnerNames = OutputUtil.joinWinnerNames(winners);
-        System.out.println("최종 우승자: " + winnerNames);
+        System.out.println("최종 우승자 : " + winnerNames);
     }
 
 }
