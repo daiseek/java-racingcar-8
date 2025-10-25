@@ -36,3 +36,6 @@ out/
 
 ### memo ###
 memo.txt
+
+### class ###
+*.class
