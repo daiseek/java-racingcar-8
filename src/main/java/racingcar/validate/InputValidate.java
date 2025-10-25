@@ -15,7 +15,7 @@ public class InputValidate {
         catch (NumberFormatException e) {throw new IllegalArgumentException("양의 정수를 입력해주세요.");}
     }
 
-    // 입력값이 5글자 이하힌지 판단하는 메서드
+    // 입력값이 5글자 이하인지 판단하는 메서드
     public void validateUnderFive(String input) {
         if (input.length() > 5) {
             throw new IllegalArgumentException("자동차 이름은 5글자 이내여야 합니다.");
