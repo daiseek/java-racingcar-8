@@ -9,7 +9,13 @@ public class InputView {
     InputValidate inputValidate = new InputValidate();
     
     public String[] separateCarNames(String carNames) {
-        return carNames.split(",");
+        String[] parts = carNames.split(",");
+        for (int i = 0; i < parts.length; i++) {
+            if (i != parts.length - 1) {
+                parts[i] = parts[i].replaceFirst("^\\s+", "");
+            }
+        }
+        return parts;
     }
 
     public String inputCarNames() {
