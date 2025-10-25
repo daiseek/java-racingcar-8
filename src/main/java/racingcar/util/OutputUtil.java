@@ -6,7 +6,7 @@ import racingcar.domain.RacingCar;
 
 public class OutputUtil {
 
-    public static List findWinnerRacingCars(List<RacingCar> racingCars) {
+    public static List<RacingCar> findWinnerRacingCars(List<RacingCar> racingCars) {
         // 1. 모든 자동차 객체의 position 중에서 최대값 찾기
         int maxPosition = racingCars.stream()
                 .mapToInt(RacingCar::getPosition) // racingCar 객체들의 position을 순차적으로 int 타입으로 가져옴
